@@ -1,0 +1,279 @@
+body {
+  background-color: rgb(2, 2, 156); /* Cambia el color de fondo a azul */
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 0; /* Elimina el relleno predeterminado del body */
+}
+
+
+.navBar {
+  background: rgb(114, 18, 1);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  max-height: 6rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.atras {
+  margin: 15px;
+  background: #2a73b8;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 80px;
+  padding: 3px;
+  height: 37px;
+ 
+}
+
+.atras:hover {
+  color: #0d007e;
+  background-color: #0d3ea8;
+  border: none;
+  transform: scale(1.1);
+}
+
+.contenedor {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 45px;
+height: 100%;
+width: 100%;
+}
+.contAzul {
+display: flex;
+background-color: darkblue;
+padding: 1rem;
+justify-content: center;
+align-items: center;
+box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+border-radius: 60px;
+}
+.contGris {
+display: flex;
+background-color: #0400ff;
+justify-content: center;
+align-items: center;
+border-radius: 50px;
+}
+.contIzq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #01abb8;
+  width: 380px;
+  height: 470px;
+  border-radius: 50px;
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.circulo {
+  background-color: rgba(217, 217, 217, 0.582);
+  height: 250px;
+  width: 250px;
+  position: relative;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo img {
+  min-height: 250px;
+  max-width: 250px;
+  position: absolute;
+}
+
+.image {
+  min-height: 250px;
+  max-width: 250px;
+  position: absolute;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.name {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: #66625c;
+}
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  box-shadow: none;
+  text-decoration:none;
+}
+
+.types div {
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 33px;
+  border-radius: 20px;
+  
+}
+
+.id {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #66625c;
+  max-width: 50%;
+  text-align: center;
+}
+
+.contDer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  width: 380px;
+  height: 470px;
+  border-radius: 50px;
+}
+.alturaPeso {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+.medidas {
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #66625c;
+  gap: 7px;
+  background-color: #fff;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.33);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #868686;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.filaStat {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+}
+.number {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #f8f8f8;
+}
+.barra {
+  background-color: #7a7a7a;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.33);
+  height: 20px;
+  width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hp {
+  height: 100%;
+  background-color: chartreuse;
+  max-width: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+.ataque {
+height: 100%;
+background-color: crimson;
+max-width: 100%;
+border-radius: 20px 0px 0px 20px;
+}
+.defensa {
+height: 100%;
+background-color: yellow;
+max-width: 100%;
+border-radius: 20px 0px 0px 20px;
+}
+.velocidad {
+height: 100%;
+background-color: deepskyblue;
+max-width: 100%;
+border-radius: 20px 0px 0px 20px;
+}
+.pokeball {
+height: 500px;
+}
+
+.poke {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.butDelete {
+font-family: "Rubik", sans-serif;
+color: rgb(255, 255, 255);
+background-color: #868686;
+font-weight: 400;
+font-size: 14px;
+text-decoration: none;
+border-radius: 20px;
+cursor: pointer;
+border: none;
+margin-top: 30px;
+margin-left: 90px;
+padding: 10px 20px;
+}
+
+.butDelete:hover {
+color: rgb(255, 255, 255);
+background-color: #e93228;
+border: none;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    padding-left: 10px; /* Reducir el espaciado izquierdo en pantallas más pequeñas */
+  }
+
+  .circulo img {
+    min-height: 150px; /* Reducir el tamaño de la imagen en pantallas más pequeñas */
+    max-width: 150px; /* Reducir el tamaño de la imagen en pantallas más pequeñas */
+  }
+
+  .filaStat {
+    display: flex;
+    flex-direction: column; /* Cambiar a una disposición de columna en pantallas más pequeñas */
+    gap: 10px; /* Reducir el espacio entre elementos en pantallas más pequeñas */
+  }
+}
+
+
+

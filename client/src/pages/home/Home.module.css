@@ -1,0 +1,159 @@
+/* Estilos generales */
+.contHome {
+    min-height: 100vh; /* Usa min-height en lugar de height para permitir que el contenido se expanda si es necesario */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido verticalmente */
+    background-color: rgb(8, 22, 153);
+}
+  .logo {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    max-width: 190px;
+    filter: drop-shadow(12px 8px 8px rgba(8, 8, 8, 0.814));
+  }
+  
+  .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(128, 0, 0);
+    height: auto;
+    padding: 1rem;
+    width: 100vw;
+  }
+  
+  .agregar {
+    margin: 15px;
+    background: #2a73b8;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 80px;
+    padding: 3px;
+    height: 37px;
+   
+  }
+  
+  .recargar {
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+    height: 37px;
+    padding: 4px;
+    background-color:  #2a73b8;;
+    
+    border: none;
+    border-radius: 50px;
+    margin: 15px;
+  }
+  
+  .butRec {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .agregar:hover {
+    background-color: gray;
+  }
+  
+  .recargar:hover {
+    background-color: grey;
+  }
+  
+  .filtros {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .filtros:focus {
+    outline: none;
+  }
+  
+  .created {
+    background-color: #b10808;
+    color:white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    height: 2rem;
+    border-radius: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 70%;
+    margin-top: 2rem;
+  }
+  
+  .created:focus {
+    outline: none;
+  }
+  
+  .order {
+    background-color: #b10808;
+    color:white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    height: 2rem;
+    border-radius: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .order:focus {
+    outline: none;
+  }
+  
+  .types {
+    background-color: #b10808;
+    color:white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    height: 2rem;
+    border-radius: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .types:focus {
+    outline: none;
+  }
+  
+  .pokeball {
+    height: 400px;
+    display: flex;
+    margin-left: 32%;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+  .navBar {
+    flex-direction: column; /* Coloca los elementos de la barra de navegación en una columna */
+    align-items: center; /* Centra los elementos de la barra de navegación verticalmente */
+    text-align: center; /* Centra el texto en la barra de navegación */
+    max-height: 15rem;
+  }
+
+  /* Ajusta los estilos de los botones para dispositivos móviles */
+  .agregar,
+  .recargar {
+    height: 30px;
+    padding: 2px;
+  }
+  .logo{
+    margin-left: 0px;
+  }
+  /* Ajusta los estilos de los selectores de filtro para dispositivos móviles */
+  .created,
+  .order,
+  .types {
+    width: 100%;
+    margin: 0.5rem; /* Elimina el margen izquierdo */
+  }
+
+  /* Ajusta el margen izquierdo de la imagen de la pokeball */
+  .pokeball {
+    height: auto;
+    margin-left: 0;
+    margin-top: 1rem; /* Agrega un poco de espacio superior */
+  }
+}
+  

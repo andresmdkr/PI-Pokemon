@@ -1,0 +1,66 @@
+/* Estilos generales para la página */
+.landing-page {
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Imagen de fondo estirada y centrada */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Contenido en el centro de la página */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #030303; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 4rem; 
+    margin-bottom: 20px;
+    background-image: linear-gradient(45deg, #fffb0b, #35bb35, #0c5502); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+  }
+  
+  /* Estilo para la palabra "Pokemon" */
+  .pokemon {
+    background-image: linear-gradient(45deg, #e01111, #b31919); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-weight: bold;
+  }
+  
+  /* Estilo para el botón principal */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #e74c3c; 
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, font-size 0.3s;
+    margin-top: 20px; 
+  }
+  .btn:hover {
+    background-color: transparent; 
+    font-size: 1.6rem; 
+    color: #e74c3c; 
+  }
