@@ -51,7 +51,7 @@ export default function Home(){
       e.preventDefault();
       dispatch(getAllPokemons())
     }
-    ////// PAGINADO 
+    ////// Paginado
     const [currentPage, setCurrentPage] = useState(1); 
     const [pokemonsPerPage, setPokemonsPerPage] = useState(12); 
     const indexOfLastPokemon = currentPage * pokemonsPerPage; 

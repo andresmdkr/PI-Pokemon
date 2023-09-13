@@ -1,10 +1,10 @@
-/* Estilos generales para la página */
+
 .landing-page {
     position: relative;
     text-align: center;
   }
   
-  /* Imagen de fondo estirada y centrada */
+  
   .background {
     position: absolute;
     top: 0;
@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
   }
   
-  /* Contenido en el centro de la página */
+  
   .content {
     position: absolute;
     top: 50%;
@@ -28,7 +28,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
   
-  /* Título principal */
+
   h1 {
     font-size: 4rem; 
     margin-bottom: 20px;
@@ -37,7 +37,7 @@
     color: transparent; 
   }
   
-  /* Estilo para la palabra "Pokemon" */
+  
   .pokemon {
     background-image: linear-gradient(45deg, #e01111, #b31919); 
     -webkit-background-clip: text; 
@@ -45,7 +45,7 @@
     font-weight: bold;
   }
   
-  /* Estilo para el botón principal */
+  
   .btn {
     display: inline-block;
     padding: 10px 20px;
