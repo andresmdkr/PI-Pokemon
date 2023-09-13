@@ -104,7 +104,7 @@ export function createPokemon(payload){
 export function deletePokemon(id) {
     return async function (dispatch) {
       try {
-        await axios.delete(`/delete/${id}`);
+        await axios.delete(`/pokemons/${id}`);
         return dispatch({
           type: GET_DETAIL,
         });

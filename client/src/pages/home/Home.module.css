@@ -1,9 +1,9 @@
-/* Estilos generales */
+
 .contHome {
-    min-height: 100vh; /* Usa min-height en lugar de height para permitir que el contenido se expanda si es necesario */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido verticalmente */
+    align-items: center; 
     background-color: rgb(8, 22, 153);
 }
   .logo {
@@ -76,10 +76,10 @@
     font-family: "Rubik", sans-serif;
     font-weight: 500;
     height: 2rem;
-    border-radius: 70px;
+    border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 70%;
+    margin-left: 4%;
     margin-top: 2rem;
   }
   
@@ -93,7 +93,7 @@
     font-family: "Rubik", sans-serif;
     font-weight: 500;
     height: 2rem;
-    border-radius: 70px;
+    border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -108,7 +108,7 @@
     font-family: "Rubik", sans-serif;
     font-weight: 500;
     height: 2rem;
-    border-radius: 70px;
+    border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -123,16 +123,16 @@
     margin-left: 32%;
   }
   
-  /* Estilos para dispositivos móviles */
+  
   @media (max-width: 768px) {
   .navBar {
-    flex-direction: column; /* Coloca los elementos de la barra de navegación en una columna */
-    align-items: center; /* Centra los elementos de la barra de navegación verticalmente */
-    text-align: center; /* Centra el texto en la barra de navegación */
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
     max-height: 15rem;
   }
 
-  /* Ajusta los estilos de los botones para dispositivos móviles */
+  
   .agregar,
   .recargar {
     height: 30px;
@@ -141,19 +141,20 @@
   .logo{
     margin-left: 0px;
   }
-  /* Ajusta los estilos de los selectores de filtro para dispositivos móviles */
+ 
+
   .created,
   .order,
   .types {
     width: 100%;
-    margin: 0.5rem; /* Elimina el margen izquierdo */
+    margin: 0.5rem; 
   }
 
-  /* Ajusta el margen izquierdo de la imagen de la pokeball */
+  
   .pokeball {
     height: auto;
     margin-left: 0;
-    margin-top: 1rem; /* Agrega un poco de espacio superior */
+    margin-top: 1rem; 
   }
 }
   
