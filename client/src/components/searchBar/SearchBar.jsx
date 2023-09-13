@@ -5,7 +5,6 @@ import buscar from "../../assets/buscar.png";
 import styles from "./SearchBar.module.css";
 
 export default function SearchBar() {
-  const searchError = useSelector((state) => state.searchError);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
