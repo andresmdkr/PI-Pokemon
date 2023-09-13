@@ -126,8 +126,7 @@ export default function Home(){
           allPokemons={allPokemons.length}
           pokemonsPerPage={pokemonsPerPage}
           />
-        {currentCharacter? <Cards allPokemons={ currentCharacter } /> : <img src={pokeball} alt="pokeball" className={styles.pokeball} />}
-        
+        {currentCharacter.length? <Cards allPokemons={ currentCharacter } /> : <img src={pokeball} alt="pokeball" className={styles.pokeball} />}
         
         </div>
 
