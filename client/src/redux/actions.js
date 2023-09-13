@@ -106,7 +106,7 @@ export function deletePokemon(id) {
       try {
         await axios.delete(`/pokemons/${id}`);
         return dispatch({
-          type: GET_DETAIL,
+          type: RESET_POKEMONS,
         });
       } catch (error) {
         console.log("Error deleting pokemon", error);
