@@ -158,3 +158,14 @@
     margin-top: 5px;
     cursor: default;
 }
+
+@media (max-width: 768px) {
+
+
+    .form {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    
+  }
