@@ -231,6 +231,21 @@ border-radius: 20px 0px 0px 20px;
 height: 500px;
 }
 
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.pokeball1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .poke {
 display: flex;
 justify-content: center;

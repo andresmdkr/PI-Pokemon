@@ -11,7 +11,6 @@ import pokeball from "../../assets/gifs/pokebola.gif";
 export default function AllPokemons( { allPokemons }){
 
     const dispatch = useDispatch();
-    // const allPokemons = useSelector((state) => state.pokemons)
 
     useEffect(()=>{
         dispatch(getAllPokemons());

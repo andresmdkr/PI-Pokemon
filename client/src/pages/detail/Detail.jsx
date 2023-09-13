@@ -1,6 +1,6 @@
 import React  from "react";
 import { useDispatch , useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {Link , useHistory, useParams} from "react-router-dom";
 import { deletePokemon, getAllPokemons, getDetail } from "../../redux/actions.js";
 import styles from "./Detail.module.css";
@@ -15,29 +15,45 @@ export default function Detail(){
     const allDetails = useSelector(state => state.details);
     const history = useHistory();
 
-    useEffect(()=>{
-        dispatch(getDetail(id))
-    },[dispatch, id])
+    const [loading, setLoading] = useState(true);
 
-    function handleDelete(){
+    useEffect(() => {
+      async function fetchDetail() {
+        try {
+          await dispatch(getDetail(id));
+          setLoading(false);
+        } catch (error) {
+          console.error("Error fetching details:", error);
+          setLoading(false);
+        }
+      }
+      fetchDetail();
+    }, [dispatch, id]);
+  
+
+    function handleDelete() {
       dispatch(deletePokemon(id));
       alert("Pokemon successfully removed");
       history.push("/home");
       dispatch(getAllPokemons());
     }
+  
 
     return(
         <div>
           <div className={styles.navBar}>
             <Link to="/home">
             <img src={atras} alt="atras" className={styles.atras}></img>
-            {/* <button className={styles.buttonHome}>Return to home</button> */}
             </Link>
           </div> 
 
-          {
-          allDetails.length > 0 ? (
-            <div className={styles.contenedor}>
+          {loading ? (
+  
+        <div className={styles.loading}>
+           <img src={pokeball} alt="pokeball" className={styles.pokeball1} />
+        </div>
+      ) : allDetails.length > 0 ? (
+        <div className={styles.contenedor}>
             <div className={styles.contAzul}>
               <div className={styles.contGris}>
                 <div className={styles.contIzq}>
@@ -147,11 +163,15 @@ export default function Detail(){
             </div>
             </div>
             </div> 
-           ) : (
-          <div className={styles.poke}>
-             <img src={pokeball} alt="pokeball" className={styles.pokeball}/>
+            ) : (
+              <div className={styles.poke}>
+                <img
+                  src={pokeball}
+                  alt="pokeball"
+                  className={styles.pokeball}
+                />
+              </div>
+            )}
           </div>
-          )}        
-       </div>
-    );
-  }
+        );
+      }
