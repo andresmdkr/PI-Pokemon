@@ -10,7 +10,7 @@
   border-radius: 10px;
   padding: 10px;
   height: 25px;
-  width: 320px;
+  width: 40vw;
   font-family: "Rubik", sans-serif;
   outline: none; 
   flex-grow: 1; 
@@ -32,8 +32,8 @@
 }
 
 .butBuscar img {
-  width: 90%; /* Asegura que la imagen ocupe el 100% del ancho del botón */
-  height: 90%; /* Asegura que la imagen ocupe el 100% del alto del botón */
+  width: 90%; 
+  height: 90%; 
 }
 
 .butBuscar:hover {
