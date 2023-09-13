@@ -3,8 +3,8 @@ const { Pokemon, Type } = require("../db.js");
 
 const getAllPokemonsHandler = async (req, res) => {
   try {
-    const { name } = req.query;
     const allPokemons = await getAllPokemons();
+    const { name } = req.query;
     if (name) {
       const pokemonsName = allPokemons.filter((p) =>
         p.name.toLowerCase().includes(name.toLowerCase())

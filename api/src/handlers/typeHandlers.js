@@ -8,13 +8,13 @@ const getAllTypesHandler = async (req, res) => {
     if (!countTypes) {
       console.log("Create them");
 
-      const allMyPokemons = await getAllPokemons(); // Asegúrate de tener esta función definida para obtener todos los Pokémon
+      const allMyPokemons = await getAllPokemons(); 
 
-      const pokemonTypes = allMyPokemons.map((pokemon) => pokemon.types); // Mapea todos los tipos de Pokémon
+      const pokemonTypes = allMyPokemons.map((pokemon) => pokemon.types);
 
-      const myTypes = pokemonTypes.flat(); // Nuevo arreglo con los elementos de los subarreglos concatenados -> [[1, 2], [3, 2]] -> [1, 2, 3, 2]
+      const myTypes = pokemonTypes.flat(); //-> [[1, 2], [3, 2]] -> [1, 2, 3, 2]
 
-      const mySetTypes = [...new Set(myTypes)]; // Elimina los tipos duplicados (Set solo acepta valores únicos) -> [1, 2, 3, 2] -> [1, 2, 3]
+      const mySetTypes = [...new Set(myTypes)]; 
 
       mySetTypes.forEach(async (type) => {
         await Type.findOrCreate({ where: { name: type } }); // Busca en la tabla Type, en la columna name, si tiene el tipo, si no lo crea.
@@ -24,7 +24,7 @@ const getAllTypesHandler = async (req, res) => {
 
       res.status(200).send(theTypes);
     } else {
-      console.log("Ya los tenía, así que no los creé");
+      console.log("No los cree porque ya los tenia");
 
       const theTypes = await Type.findAll(); // Trae todos los datos de la tabla Type.
       res.status(200).send(theTypes);
