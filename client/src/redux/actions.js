@@ -8,7 +8,8 @@ import {GET_ALL_POKEMONS ,
         RESET_POKEMONS,
         GET_TYPES,
         FILTER_BY_TYPES,
-        GET_DETAIL} from "./actions-types"
+        GET_DETAIL,
+        DELETE_POKEMON} from "./actions-types"
 
 
 export function getAllPokemons(){
@@ -106,7 +107,7 @@ export function deletePokemon(id) {
       try {
         await axios.delete(`/pokemons/${id}`);
         return dispatch({
-          type: RESET_POKEMONS,
+          type: DELETE_POKEMON,
         });
       } catch (error) {
         console.log("Error deleting pokemon", error);
