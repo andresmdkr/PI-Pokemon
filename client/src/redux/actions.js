@@ -35,17 +35,18 @@ export function getTypes(){
 export function searchByName(name) {
     return async function (dispatch) {
       try {
-        let json = await axios.get("/pokemons?name=" + name);
-        return dispatch({
+        const response = await axios.get("/pokemons?name=" + name);
+        dispatch({
           type: SEARCH_BY_NAME,
-          payload: json.data
+          payload: response.data,
         });
+        return response.data;
       } catch (error) {
-        
         dispatch({
           type: ERROR_SEARCH_BY_NAME,
-          payload: "No se pudo encontrar el Pokémon. Intente nuevamente."
+          payload: "No se pudo encontrar el Pokémon. Intente nuevamente.",
         });
+        throw error;
       }
     };
   }

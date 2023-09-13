@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchByName } from "../../redux/actions.js";
 import buscar from "../../assets/buscar.png";
 import styles from "./SearchBar.module.css";
 
 export default function SearchBar() {
+  const searchError = useSelector((state) => state.searchError);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -15,15 +16,24 @@ export default function SearchBar() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(searchByName(name));
+    dispatch(searchByName(name))
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+        window.alert("No se encontró el pokemon");
+      });
     setName("");
   }
+
+
 
   return (
     <div className={styles.buscador}>
       <input
         type="text"
-        placeholder="Busca tu pokemon..."
+        placeholder="Busca tu Pokémon..."
         onChange={(e) => handleInput(e)}
         value={name}
         className={styles.input}
