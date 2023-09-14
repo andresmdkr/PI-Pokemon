@@ -11,16 +11,16 @@ function validate(input){
     if (!input.name || input.name.length < 4) {
         errors.name = "The name must be more than four letters";
     }
-    if(!input.hp || input.hp < 0 || input.hp > 150){
+    if(!input.hp || input.hp <= 0 || input.hp > 150){
         errors.hp = "Hp must be between 1 - 150";
     }
-    if(!input.attack || input.attack < 0 || input.attack > 150){
+    if(!input.attack || input.attack <= 0 || input.attack > 150){
         errors.attack = "Attack must be between 1 - 150";
     }
-    if(!input.defense || input.defense < 0 || input.defense > 150){
+    if(!input.defense || input.defense <= 0 || input.defense > 150){
         errors.defense = "Defense must be between 1 - 150";
     }
-    if(!input.speed || input.speed < 0 || input.speed > 150){
+    if(!input.speed || input.speed <= 0 || input.speed > 150){
         errors.speed = "Speed must be between 1 - 150";
     }
     if (input.types.length === 0) {
