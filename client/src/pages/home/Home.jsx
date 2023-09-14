@@ -27,9 +27,12 @@ export default function Home(){
     },[dispatch]);
 
     function handleFilterCreated(e){
+        e.preventDefault();
+        currentPage !== 1 && setCurrentPage(1)
         dispatch(filterCreated(e.target.value))
     }
     function handleOrder(e){
+      currentPage !== 1 && setCurrentPage(1)
         if(e.target.value === "asc" || e.target.value === "desc"){
             e.preventDefault();
             dispatch(filterByName(e.target.value))
@@ -45,6 +48,7 @@ export default function Home(){
     }
     function handleFilterByType(e){
      e.preventDefault();
+     currentPage !== 1 && setCurrentPage(1)
      dispatch(filterByTypes(e.target.value))
     }
     function handleClick(e){
