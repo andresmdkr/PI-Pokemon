@@ -46,11 +46,11 @@ export default function Form(){
         image: "",
         types: []
     }   )
-    const [errors, setErrors] = useState({firstTry:true});
+    const [errors, setErrors] = useState({});
 
     useEffect(()=>{
         dispatch(getTypes());
-     },[]);
+     },[dispatch]);
     
     useEffect(() => {
         setErrors(
@@ -65,12 +65,6 @@ export default function Form(){
             ...input,
             [e.target.name]: e.target.value
         })
-    if(errors.firstTry){
-        setErrors(validate({
-            ...input,
-            [e.target.name]: e.target.value
-            })
-        )}
     }
     function handleSelect(e){
         if (!input.types.includes(e.target.value)) {
@@ -89,7 +83,8 @@ export default function Form(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        if(input.name && input.hp && input.attack && input.defense && input.speed && input.types.length >= 1){
+        console.log(Object.keys(errors).length)
+        if(Object.keys(errors).length === 0){
             dispatch(createPokemon(input))
             alert("Success")
             setInput({
@@ -103,12 +98,10 @@ export default function Form(){
                 image: "",
                 types: []
             });
-            errors.firstTry = false
-            history.push("/home")  //cuando crea el personaje se redirige a la pag principal
-        if(errors.firstTry){
-            alert("Missing dates")
-        }
-    }}
+            history.push("/home")  
+       
+    } else alert("Error: insert correct values")
+    }
     function handleCheckErrors(e){
         e.preventDefault();
         setErrors(validate({
