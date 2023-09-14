@@ -1,7 +1,6 @@
 import axios from "axios";
 import {GET_ALL_POKEMONS , 
         SEARCH_BY_NAME, 
-        ERROR_SEARCH_BY_NAME,
         FILTER_CREATED,
         ORDER_BY_NAME,
         ORDER_BY_ATTACK,
@@ -42,10 +41,6 @@ export function searchByName(name) {
         });
         return response.data;
       } catch (error) {
-        dispatch({
-          type: ERROR_SEARCH_BY_NAME,
-          payload: "No se pudo encontrar el Pokémon. Intente nuevamente.",
-        });
         throw error;
       }
     };

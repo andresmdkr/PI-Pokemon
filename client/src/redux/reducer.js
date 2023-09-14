@@ -1,4 +1,4 @@
-import {GET_ALL_POKEMONS, SEARCH_BY_NAME ,ERROR_SEARCH_BY_NAME, 
+import {GET_ALL_POKEMONS, SEARCH_BY_NAME , 
     FILTER_CREATED, ORDER_BY_NAME, 
     ORDER_BY_ATTACK, RESET_POKEMONS, GET_TYPES, 
     FILTER_BY_TYPES, GET_DETAIL, CREATE_POKEMON,
@@ -26,12 +26,6 @@ switch(action.type){
             ...state,
             pokemons: action.payload
         }
-        case ERROR_SEARCH_BY_NAME:
-            return {
-              ...state,
-              searchResults: [], 
-              searchError: action.payload, 
-            };
     case FILTER_CREATED:
         const createdFilter= action.payload === "created" ? state.allPokemons.filter(el => el.createInDB) : state.allPokemons.filter(el => !el.createInDB)
         return{
