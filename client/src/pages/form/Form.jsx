@@ -256,6 +256,9 @@ export default function Form(){
                         {errors.image && (
                             <div className={styles.error}>{errors.image}</div>
                         )}
+                         {input.image && (
+        <img src={input.image} alt="Pokemon" className={styles.image} />
+    )}
                         </div>
                         
                         <button id="bt" className={styles.button} onClick={(e) => handleSubmit(e)}>Create</button>
