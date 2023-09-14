@@ -94,7 +94,7 @@ export default function Home(){
             className={styles.created}
             >
             <option value="all">All</option>
-            <option value="existing">Existing</option>
+            <option value="existing">Api</option>
             <option value="created">Created</option>
           </select>
 

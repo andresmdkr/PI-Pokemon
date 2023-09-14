@@ -8,8 +8,8 @@ import atras from "../../assets/atras.png";
 
 function validate(input){
     const errors = {};
-    if (!input.name || input.name.length < 4) {
-        errors.name = "The name must be more than four letters";
+    if (!input.name || input.name.length < 4 || input.name.length > 256) {
+        errors.name = "The name must be more than four letters and less than 256 letters";
     }
     if(!input.hp || input.hp <= 0 || input.hp > 150){
         errors.hp = "Hp must be between 1 - 150";
