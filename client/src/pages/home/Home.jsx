@@ -32,7 +32,6 @@ export default function Home(){
         dispatch(filterCreated(e.target.value))
     }
     function handleOrder(e){
-      currentPage !== 1 && setCurrentPage(1)
         if(e.target.value === "asc" || e.target.value === "desc"){
             e.preventDefault();
             dispatch(filterByName(e.target.value))
