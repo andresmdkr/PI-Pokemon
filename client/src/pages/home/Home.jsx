@@ -53,7 +53,7 @@ export default function Home(){
     }
     ////// Paginado
     const [currentPage, setCurrentPage] = useState(1); 
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(12); 
+    const pokemonsPerPage = 2; 
     const indexOfLastPokemon = currentPage * pokemonsPerPage; 
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage; 
     const currentCharacter = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon)
