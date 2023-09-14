@@ -102,15 +102,6 @@ export default function Form(){
        
     } else alert("Error: insert correct values")
     }
-    function handleCheckErrors(e){
-        e.preventDefault();
-        setErrors(validate({
-            ...input,
-            [e.target.name]: e.target.value,
-            types: [...input.types, e.target.value]
-        }))
-        handleSubmit(e)
-    }
     
     return(
         <div>
@@ -267,7 +258,7 @@ export default function Form(){
                         )}
                         </div>
                         
-                        <button id="bt" className={styles.button} onClick={e => handleCheckErrors(e)}>Create</button>
+                        <button id="bt" className={styles.button} onClick={(e) => handleSubmit(e)}>Create</button>
                     </div>
                 </div>
             </form>
